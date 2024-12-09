@@ -97,7 +97,7 @@ class ProductManageController extends Controller
     	    	$product->harga = $req->harga;
     	    	$product->save();
 
-    	    	Session::flash('create_success', 'Barang baru berhasil ditambahkan');
+    	    	Session::flash('create_success', 'Menu baru berhasil ditambahkan');
 
     		    return redirect('/product');
         	}else{
@@ -123,7 +123,7 @@ class ProductManageController extends Controller
     			$file->move('excel_file', $nama_file);
     			Excel::import(new ProductImport, public_path('/excel_file/'.$nama_file));
 
-    			Session::flash('import_success', 'Data barang berhasil diimport');
+    			Session::flash('import_success', 'Data Menu berhasil diimport');
         	}catch(\Exception $ex){
         		Session::flash('import_failed', 'Cek kembali terdapat data kosong atau kode barang yang telah tersedia');
 
@@ -185,7 +185,7 @@ class ProductManageController extends Controller
                 Transaction::where('kode_barang', $kode_barang)
                 ->update(['kode_barang' => $req->kode_barang]);
 
-                Session::flash('update_success', 'Data barang berhasil diubah');
+                Session::flash('update_success', 'Data Menu berhasil diubah');
 
                 return redirect('/product');
             }else{
@@ -207,7 +207,7 @@ class ProductManageController extends Controller
         if($check_access->kelola_barang == 1){
             Product::destroy($id);
 
-            Session::flash('delete_success', 'Barang berhasil dihapus');
+            Session::flash('delete_success', 'Menu berhasil dihapus');
 
             return back();
         }else{

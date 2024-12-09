@@ -144,7 +144,7 @@
 	<div class="header">
 		<table class="w-100">
 			<tr>
-				<td class="img-td text-left"><img src="{{ asset('icons/logo-mini2.png') }}"></td>
+				<td class="img-td text-left"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekQQKXSE1mVJQ6rcyXVIGDxD6kKYgvFSLjBXmMJ_lVz3mzt2ir8-CzDgC3APjDg5mi8w&usqp=CAU"></td>
 				<td class="text-left">
 					<p class="text-12 txt-dark d-block mb-1">{{ $market->nama_toko }}</p>
 					<p class="text-10 txt-dark d-block">{{ $market->alamat }}</p>
@@ -251,7 +251,7 @@
 	<div class="header">
 		<table class="w-100">
 			<tr>
-				<td class="img-td text-left"><img src="{{ asset('icons/logo-mini2.png') }}"></td>
+				<td class="img-td text-left"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekQQKXSE1mVJQ6rcyXVIGDxD6kKYgvFSLjBXmMJ_lVz3mzt2ir8-CzDgC3APjDg5mi8w&usqp=CAU"></td>
 				<td class="text-left">
 					<p class="text-12 txt-dark d-block mb-1">{{ $market->nama_toko }}</p>
 					<p class="text-10 txt-dark d-block">{{ $market->alamat }}</p>

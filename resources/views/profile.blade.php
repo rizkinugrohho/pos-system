@@ -163,7 +163,7 @@
                 <p class="nama-aktivitas">{{ $act->nama_kegiatan }}</p>
                 <span class="des-aktivitas">{{ date('d M', strtotime($act->created_at)) }}</span>
               </div>
-              <p class="des-aktivitas">{{ date('H:i', strtotime($act->created_at)) }} <span class="dot"><i class="mdi mdi-checkbox-blank-circle"></i></span> {{ $act->jumlah }} Jenis Barang</p>
+              <p class="des-aktivitas">{{ date('H:i', strtotime($act->created_at)) }} <span class="dot"><i class="mdi mdi-checkbox-blank-circle"></i></span> {{ $act->jumlah }} Jenis Produk</p>
             </div>
             @endforeach
           </div>

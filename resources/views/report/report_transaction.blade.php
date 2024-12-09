@@ -166,11 +166,10 @@
               @foreach($dates as $date)
               <li class="txt-light">{{ date('d M, Y', strtotime($date)) }}</li>
               @php
-              $transactions = \App\Transaction::select('kode_transaksi')
-              ->whereDate('transactions.created_at', $date)
-              ->distinct()
-              ->latest()
-              ->get();
+              $transactions = \App\Transaction::whereDate('transactions.created_at', $date)
+                  ->groupBy('kode_transaksi')
+                  ->orderByRaw('MAX(created_at) DESC') 
+                  ->get(['kode_transaksi', \DB::raw('MAX(created_at) as created_at')]);
               @endphp
               <div class="table-responsive">
                 <table class="table table-custom">

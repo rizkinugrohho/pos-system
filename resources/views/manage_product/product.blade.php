@@ -6,7 +6,7 @@
 <div class="row page-title-header">
   <div class="col-12">
     <div class="page-header d-flex justify-content-between align-items-center">
-      <h4 class="page-title">Daftar Barang</h4>
+      <h4 class="page-title">Daftar Menu</h4>
       <div class="d-flex justify-content-start">
       	<div class="dropdown">
 	        <button class="btn btn-icons btn-inverse-primary btn-filter shadow-sm" type="button" id="dropdownMenuIconButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -16,14 +16,14 @@
 	          <h6 class="dropdown-header">Urut Berdasarkan :</h6>
 	          <div class="dropdown-divider"></div>
 	          <a href="#" class="dropdown-item filter-btn" data-filter="kode_barang">Kode Barang</a>
-            <a href="#" class="dropdown-item filter-btn" data-filter="jenis_barang">Jenis Barang</a>
-            <a href="#" class="dropdown-item filter-btn" data-filter="nama_barang">Nama Barang</a>
-            <a href="#" class="dropdown-item filter-btn" data-filter="berat_barang">Berat Barang</a>
-            <a href="#" class="dropdown-item filter-btn" data-filter="merek">Merek Barang</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="jenis_barang">Jenis Produk</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="nama_barang">Nama Menu</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="berat_barang">Berat</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="merek">Merek</a>
             @if($supply_system->status == true)
-            <a href="#" class="dropdown-item filter-btn" data-filter="stok">Stok Barang</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="stok">Stok</a>
             @endif
-            <a href="#" class="dropdown-item filter-btn" data-filter="harga">Harga Barang</a>
+            <a href="#" class="dropdown-item filter-btn" data-filter="harga">Harga</a>
 	        </div>
 	      </div>
         <div class="dropdown dropdown-search">
@@ -51,7 +51,7 @@
       <div class="modal-content">
         <form action="{{ url('/product/update') }}" method="post" name="update_form">
           <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Edit Barang</h5>
+            <h5 class="modal-title" id="editModalLabel">Edit Menu</h5>
             <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -74,23 +74,23 @@
                 <div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 error-notice" id="kode_barang_error"></div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Jenis Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Jenis Produk</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <select class="form-control" name="jenis_barang">
-                    <option value="Produksi">Produksi</option>
-                    <option value="Konsumsi">Konsumsi</option>
+                    <option value="Snack">Snack</option>
+							  			<option value="Kopi">Kopi</option>
                   </select>
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Nama Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Nama Menu</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <input type="text" class="form-control" name="nama_barang">
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 error-notice" id="nama_barang_error"></div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Berat Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Berat</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <div class="input-group">
                       <input type="text" class="form-control number-input input-notzero" name="berat_barang">
@@ -108,20 +108,20 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Merek Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Merek</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <input type="text" class="form-control" name="merek">
                 </div>
               </div>
               <div class="form-group row" @if($supply_system->status == false) hidden="" @endif>
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Stok Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Stok</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <input type="text" class="form-control number-input" name="stok">
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 error-notice" id="stok_error"></div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Harga Barang</label>
+                <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Harga</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <div class="input-group">
                       <div class="input-group-prepend">

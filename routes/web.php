@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+Route::get('/', 'AuthManageController@viewLogin')->name('login');
 
 Route::get('/login', 'AuthManageController@viewLogin')->name('login');
 Route::post('/verify_login', 'AuthManageController@verifyLogin');

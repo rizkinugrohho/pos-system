@@ -127,10 +127,10 @@ $(function() {
     },
     messages: {
       kode_barang: "Kode barang tidak boleh kosong",
-      nama_barang: "Nama barang tidak boleh kosong",
+      nama_barang: "Nama Menu tidak boleh kosong",
       jenis_barang: "Silakan pilih jenis barang",
-      stok: "Stok barang tidak boleh kosong",
-      harga: "Harga barang tidak boleh kosong"
+      stok: "Stok tidak boleh kosong",
+      harga: "Harga tidak boleh kosong"
     },
     errorPlacement: function(error, element) {
         var name = element.attr("name");
@@ -152,10 +152,10 @@ var validator = $("form[name='update_form']").validate({
   },
   messages: {
     kode_barang: "Kode barang tidak boleh kosong",
-    nama_barang: "Nama barang tidak boleh kosong",
+    nama_barang: "Nama Menu tidak boleh kosong",
     jenis_barang: "Silakan pilih jenis barang",
-    stok: "Stok barang tidak boleh kosong",
-    harga: "Harga barang tidak boleh kosong"
+    stok: "Stok tidak boleh kosong",
+    harga: "Harga tidak boleh kosong"
   },
   errorPlacement: function(error, element) {
       var name = element.attr("name");

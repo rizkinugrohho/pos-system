@@ -13,7 +13,7 @@ class ViewManageController extends Controller
     // Show View Dashboard
     public function viewDashboard()
     {
-    	$kd_transaction = Transaction::select('kode_transaksi')
+    	$kd_transaction = Transaction::select('kode_transaksi','created_at')
     	->latest()
     	->distinct()
     	->take(5)

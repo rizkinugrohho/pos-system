@@ -8,7 +8,7 @@
     <div class="page-header d-flex justify-content-start align-items-center">
       <div class="quick-link-wrapper d-md-flex flex-md-wrap">
         <ul class="quick-links">
-          <li><a href="{{ url('product') }}">Daftar Barang</a></li>
+          <li><a href="{{ url('product') }}">Daftar Menu</a></li>
           <li><a href="{{ url('product/new') }}">Barang Baru</a></li>
         </ul>
       </div>
@@ -75,7 +75,7 @@
 				<form action="{{ url('/product/create') }}" method="post" name="create_form">
 					@csrf
 					<div class="form-group row">
-			  			<label class="col-12 font-weight-bold col-form-label">Kode Barang <span class="text-danger">*</span></label>
+			  			<label class="col-12 font-weight-bold col-form-label">Kode Menu <span class="text-danger">*</span></label>
 					  	<div class="col-12">
 					  		<div class="input-group">
 					  			<input type="text" class="form-control number-input" name="kode_barang" placeholder="Masukkan Kode Barang">
@@ -89,7 +89,7 @@
 					<div class="form-group row">
 					  	<div class="col-lg-6 col-md-6 col-sm-12 space-bottom">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Nama Barang <span class="text-danger">*</span></label>
+					  			<label class="col-12 font-weight-bold col-form-label">Nama Menu <span class="text-danger">*</span></label>
 							  	<div class="col-12">
 							  		<input type="text" class="form-control" name="nama_barang" placeholder="Masukkan Nama Barang">
 							  	</div>
@@ -98,12 +98,12 @@
 					  	</div>
 					  	<div class="col-lg-6 col-md-6 col-sm-12">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Jenis Barang <span class="text-danger">*</span></label>
+					  			<label class="col-12 font-weight-bold col-form-label">Jenis Produk <span class="text-danger">*</span></label>
 							  	<div class="col-12">
 							  		<select class="form-control" name="jenis_barang">
-							  			<option value="">-- Pilih Jenis Barang --</option>
-							  			<option value="Produksi">Produksi</option>
-							  			<option value="Konsumsi">Konsumsi</option>
+							  			<option value="">-- Pilih Jenis Produk --</option>
+							  			<option value="Snack">Snack</option>
+							  			<option value="Kopi">Kopi</option>
 							  		</select>
 							  	</div>
 								<div class="col-12 error-notice" id="jenis_barang_error"></div>
@@ -113,7 +113,7 @@
 					<div class="form-group row">
 					  	<div class="col-lg-6 col-md-6 col-sm-12 space-bottom">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Berat Barang</label>
+					  			<label class="col-12 font-weight-bold col-form-label">Berat</label>
 							  	<div class="col-12">
 							  		<div class="input-group">
 							  			<input type="text" class="form-control number-input" name="berat_barang" placeholder="Masukkan Berat Barang">
@@ -133,7 +133,7 @@
 					  	</div>
 					  	<div class="col-lg-6 col-md-6 col-sm-12">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Merek Barang</label>
+					  			<label class="col-12 font-weight-bold col-form-label">Merek</label>
 							  	<div class="col-12">
 							  		<input type="text" class="form-control" name="merek" placeholder="Masukkan Merek Barang">
 							  	</div>
@@ -144,7 +144,7 @@
 						@if($supply_system->status == true)
 					  	<div class="col-lg-6 col-md-6 col-sm-12 space-bottom">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Stok Barang <span class="text-danger">*</span></label>
+					  			<label class="col-12 font-weight-bold col-form-label">Stok <span class="text-danger">*</span></label>
 							  	<div class="col-12">
 							  		<input type="text" class="form-control number-input" name="stok" placeholder="Masukkan Stok Barang">
 							  	</div>
@@ -154,7 +154,7 @@
 					  	@endif
 					  	<div class="col-lg-6 col-md-6 col-sm-12">
 					  		<div class="row">
-					  			<label class="col-12 font-weight-bold col-form-label">Harga Barang <span class="text-danger">*</span></label>
+					  			<label class="col-12 font-weight-bold col-form-label">Harga <span class="text-danger">*</span></label>
 							  	<div class="col-12">
 							  		<div class="input-group">
 							  			<div class="input-group-prepend">

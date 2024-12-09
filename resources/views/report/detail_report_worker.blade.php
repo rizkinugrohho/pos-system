@@ -223,11 +223,11 @@
 			              @foreach($dates_2 as $date)
 			              <li class="txt-light">{{ date('d M, Y', strtotime($date)) }}</li>
 			              @php
-			              $transactions = \App\Transaction::select('kode_transaksi')
-			              ->whereDate('transactions.created_at', $date)
-			              ->distinct()
-			              ->latest()
-			              ->get();
+			              $transactions = \App\Transaction::select('kode_transaksi', 'created_at')
+							->whereDate('created_at', $date)
+							->distinct()
+							->orderBy('created_at', 'desc')
+							->get();
 			              @endphp
 			              <div class="table-responsive">
 			                <table class="table table-custom">

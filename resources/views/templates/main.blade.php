@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Website POS</title>
+    <title>IPOS Kelompok 4</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css') }}">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="preview-item-content">
                       <h6 class="preview-subject font-weight-normal text-dark mb-1">Barang Telah Habis</h6>
-                      <p class="font-weight-light small-text mb-0"> Stok barang {{ $notif->nama_barang }} telah habis</p>
+                      <p class="font-weight-light small-text mb-0"> Stoks {{ $notif->nama_barang }} telah habis</p>
                     </div>
                   </a>
                   @endif
@@ -176,7 +176,7 @@
               <div class="collapse" id="kelola_barang">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/product') }}">Daftar Barang</a>
+                    <a class="nav-link" href="{{ url('/product') }}">Daftar Menu</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url('/supply') }}">Pasok Barang</a>
@@ -254,7 +254,7 @@
                             </div>
                             <div class="text-group ml-3">
                               <p class="m-0 title-notification">Barang Telah Habis</p>
-                              <p class="m-0 description-notification">Stok barang {{ $notif->nama_barang }} telah habis</p>
+                              <p class="m-0 description-notification">Stok {{ $notif->nama_barang }} telah habis</p>
                             </div>
                           </div>
                           @endif
@@ -284,7 +284,7 @@
           </div>
           <footer class="footer" id="footer-content">
             <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2024 <a href="https://rizkinugroho.netlify.app/" target="_blank">Rizki Nugroho</a>. All rights reserved.</span>
               <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i>
               </span>
             </div>
